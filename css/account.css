@@ -1,0 +1,124 @@
+body > div.container{
+    margin-top: 100px;
+}
+.info-box{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 200px;
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.info-box span{
+    color: #ddd;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+@media (max-width: 991px){
+    .info-box{
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .list-group{
+        margin-top: -1px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .box-info{
+        position: fixed;
+        max-width: 230px;
+        min-width: 210px;
+    }
+    .container.div {
+        min-height: 548px;
+    }
+    /* @media (max-width: 1199.98px){
+        .boxinfo{
+            padding-left: 30px;
+        }
+    } */
+}
+#div-right > div{
+    display: none;
+    -webkit-animation: fadeEffect 0.8s;
+    animation: fadeEffect 0.8s;
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.list-group-item:hover{
+    text-decoration: none;
+    color: #009644;
+    opacity: 0.8;
+}
+.list-group-item.active{
+    background-color: rgb(0,177,79,0.125);
+    color: green;
+    border: inherit;
+    border-left: 4px solid rgb(0,177,79);
+}
+div#div-right > div{
+    display: none;
+    -webkit-animation: fadeEffect 0.8s;
+    animation: fadeEffect 0.5s;
+}
+div#div-right > div.active{
+    display: block;
+}
+.boxinfo{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.boxinfo .title{
+    border-radius: 5px 5px 0 0;
+    background: #e6e6e6;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 15px;
+    padding: 14px 0 10px 20px;
+}
+.accinfo{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.accinfo td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+.accinfo td:first-child{
+    font-size: 14px;
+    width: 25%;
+}
+.accinfo .form-control{
+    width: 50% !important;
+}
+.accinfo .note{
+    font-size: 10px;
+    cursor: default;
+}
+.changepwd .btn-submit{
+    margin-left: 25%;
+    padding-left: 8px;
+}
+.boxinfo form .text-error{
+    padding: 3px 0 0px 0px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ff3333;
+    background: none;
+    border-radius: 0px;
+    border: none;
+    margin-bottom: 0px;
+}

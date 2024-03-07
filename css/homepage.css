@@ -1,0 +1,248 @@
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+.img-fluid{
+    height: inherit;
+    object-fit: contain;
+  }
+  body {
+    padding-top: 10px;
+  }
+
+  @media (min-width: 992px) {
+    body {
+      padding-top: 10px;
+    }
+  }
+  .carousel-item {transition: 0.3s;}
+
+  .front-img-div{
+    background-image: url(../img/pic-job.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    opacity: 0.7;
+    object-fit: contain;
+    display: flex;
+  }
+  .front-img-div > form{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .front-img-div > form{
+    display: flex;
+  }
+  .front-img-div #input{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid #aaa;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-right: none;
+  }
+  .front-img-div #search{
+    width: 10%;
+    min-width: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #aaa;
+    margin-left: -1px;
+  }
+
+  .front-img-div #cid.local{
+    border: 1px solid #aaa;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-left: none;
+    padding-right: 3px;
+  }
+  .front-img-div #search{
+    height: 49px;
+  }
+  .front-img-div #search .img-icons-s{
+    width: 55%;
+    object-fit: contain;
+    margin-left: -3px;
+  }
+  .front-img-div #cid.local:focus, .front-img-div #input{
+    outline: none;
+  }
+  .front-img-div #search:hover{
+    box-shadow: 2px 1px 5px #4caf4fde;
+  }
+  .front-img-div #search:active{
+    opacity: 0.8;
+  }
+  .container-fluid{
+    margin-bottom: 20px;
+  }
+
+  .carousel-inner .carousel-item img{
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+  }
+
+  .tips{
+    display: none;
+  }
+  .tips#tip-1{
+    display: block;
+  }
+
+  .list-row-spabet{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+  
+  @media (min-width: 576px){
+    .carousel-item{
+      box-sizing: border-box;
+      height: 293px;
+    }
+  }
+  @media (min-width: 768px){
+    .carousel-item{
+      box-sizing: border-box;
+      height: 140px;
+    }
+  }
+  @media (min-width: 991px){
+    .carousel-item{
+      box-sizing: border-box;
+      height: 129px;
+    }
+  }

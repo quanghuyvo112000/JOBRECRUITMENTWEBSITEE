@@ -1,0 +1,53 @@
+#loggin-form .card, #register-form .card{
+    padding: 24px;
+}
+
+#loggin-form input.form-control, #loggin-form input.btn, #register-form input.form-control, #register-form input.btn, #cv-form input.form-control, #cv-form input.btn, #cv-form .form-select{
+    border-radius: 2px;
+    width: 100%;
+}
+#loggin-form input.btn, #loggin-form a, #register-form input.btn, #register-form a {
+    --bs-btn-bg: rgb(0,177,79);
+    --bs-btn-border-color: rgb(0,177,79);
+    --bs-btn-hover-bg: #009644;
+    --bs-btn-hover-border-color: #008E40;
+    --bs-btn-active-bg: #008E40;
+    --bs-btn-active-border-color: #00823B;
+    --bs-link-color: rgb(0,177,79);
+    --bs-link-hover-color: #009644;
+    text-decoration: none;
+}
+#loggin-form input.form-control:focus, #register-form input.form-control:focus, .user_type#user_type:focus, #cv-form .form-control:focus, #cv-form input.form-check-input:focus, #cv-form .form-select:focus{
+    border-color: #00b15095;
+    box-shadow: 0 0 3px .2rem #00B14F3A;
+    outline: 0;
+}
+#cv-form input.form-check-input:checked{
+    border-color: #00B14F;
+    background-color: rgb(0,177,79);
+    box-shadow: 0 0 3px .2rem #00B14F3A;
+    outline: 0;
+}
+#loggin-form .title, #register-form .title{
+    margin-bottom: 15px;
+}
+#register-form .mb-3, #cv-form .mb-3{
+    margin-bottom: 0 !important;
+    padding-bottom: 10px;
+    padding-top: 18px;
+}
+@media (max-width: 1140px) and (min-width: 992px) {
+    .inner-container{
+        width: 80%;
+        min-width: 300px;
+        margin: auto;
+    }
+}
+#cv-form .title_card{
+    background-color: rgb(248, 248, 248);
+    margin-bottom: 0 !important;
+    padding-top: 22px;
+}
+#cv-form .dropdown-divider{
+    margin: 0;
+}
